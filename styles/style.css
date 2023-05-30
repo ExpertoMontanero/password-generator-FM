@@ -1,0 +1,84 @@
+/* Fonts */
+@font-face {
+    font-family: customFont;
+    src: url(../assets/fonts/JetBrainsMono-VariableFont_wght.ttf);
+}
+
+/* Color pallete */
+:root {
+    --background-color: hsl(248, 15%, 11%);
+    --main-dark-grey: hsl(248, 10%, 15%);
+    --dark-text: hsl(251, 9%, 53%);
+    --light-text: hsl(252, 11%, 91%);
+    --lime-green: hsl(127, 100%, 82%);
+    --pale-red: hsl(0, 91%, 63%);
+    --pale-orange: hsl(13, 95%, 66%);
+    --pale-yellow: hsl(42, 91%, 68%);
+}
+
+
+body {
+    height: 97vh;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    font-family: customFont;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p,
+h1,
+h2,
+h3 {
+    color: var(--light-text);
+}
+
+/* Whole content container */
+#content-container {
+    height: 630px;
+    width: 540px;
+}
+
+/* THREE SMALLER CONTAINERS (for heading section, password section and main section) */
+
+/* HEADING SECTION */
+#heading-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--background-color);
+}
+
+#heading-text {
+    color: var(--dark-text);
+}
+
+/* PASSWORD SECTION */
+#password-container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    width: 100%;
+    margin: 0 0 22px 0;
+    background-color: var(--main-dark-grey);
+}
+
+#password-text {
+    font-size: 32px;
+    line-height: 42px;
+}
+
+#copy-icon {
+    width: 21px;
+    height: 24px;
+}
+
+/* MAIN CONTENT SECTION */
+#main-container {
+    height: 528px;
+    width: 100%;
+    background-color: var(--main-dark-grey);
+}
