@@ -13,6 +13,7 @@
 </head>
 
 <body>
+
   <div id="content-container">
     <div id="heading-container">
       <h2 id="heading-text">Password Generator</h2>
@@ -21,13 +22,46 @@
       <div id="password-text">PTx1f5DaFX</div>
       <img src="assets\images\icon-copy.svg" id="copy-icon" alt="copy icon">
     </div>
-    <div id="main-container">
-      <div class="character-length-line">
-        <p id="character-text">Character Length</p>
-        <h2 id="character-number">10</h2>
-      </div>
-      <div class="slidecontainer">
-        <input type="range" min="1" max="20" value="10" class="slider" id="mySlider" range="true">
+    <div id="padding-container">
+      <div id="main-container">
+        <div class="character-length-line">
+          <p id="character-text">Character Length</p>
+          <h2 id="character-number">10</h2>
+        </div>
+        <div class="slidecontainer">
+          <input type="range" min="1" max="20" value="10" class="slider" id="mySlider" range="true">
+        </div>
+        <section id="checkbox-section">
+          <label class="checkbox-line">
+            <input type="checkbox" class="checkbox" name="checkbox" id="uppercase-cb" checked="checked"
+              alt="uppercase letter checkbox">
+            <span class="checkmark"></span>
+            <p class="checkbox-line-text">Include Uppercase Letters</p>
+          </label>
+          <label class="checkbox-line">
+            <input type="checkbox" class="checkbox" name="checkbox" id="lowercase-cb" checked="checked"
+              alt="uppercase letter checkbox">
+            <span class="checkmark"></span>
+            <p class="checkbox-line-text">Include Lowercase Letters</p>
+          </label>
+          <label class="checkbox-line">
+            <input type="checkbox" class="checkbox" name="checkbox" id="numbers-cb" checked="checked"
+              alt="uppercase letter checkbox">
+            <span class="checkmark"></span>
+            <p class="checkbox-line-text">Include Numbers</p>
+          </label>
+          <label class="checkbox-line">
+            <input type="checkbox" class="checkbox" name="checkbox" id="symbols-cb" alt="uppercase letter checkbox">
+            <span class="checkmark"></span>
+            <p class="checkbox-line-text">Include Symbols</p>
+          </label>
+        </section>
+        <section id="password-strenght-section">
+          <p id="strength-text">STRENGTH</p>
+          <div id="strength-indicator-box">
+           example
+          </div>
+        </section>
       </div>
     </div>
   </div>

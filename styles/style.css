@@ -37,11 +37,6 @@ h3 {
     color: var(--light-text);
 }
 
-/* Whole content container */
-#content-container {
-    height: 600px;
-    width: 490px;
-}
 
 /* THREE SMALLER CONTAINERS (for heading section, password section and main section) */
 
@@ -49,7 +44,7 @@ h3 {
 #heading-container {
     display: flex;
     justify-content: center;
-    width: 100%;
+    width: 540px;
     background-color: var(--background-color);
 }
 
@@ -63,42 +58,56 @@ h3 {
     justify-content: space-between;
     align-items: center;
     height: 80px;
-    width: 100%;
-    margin-bottom:28px;
-    padding: 0 1.5em;
+    width: 540px;
+    margin-bottom: 28px;
     background-color: var(--main-dark-grey);
 }
 
 #password-text {
+    padding-left: 30px;
     font-size: 32px;
     line-height: 42px;
 }
 
 #copy-icon {
+    padding-right: 30px;
     width: 21px;
     height: 24px;
 }
 
 /* MAIN CONTENT SECTION */
-#main-container {
+
+#padding-container {
+    display: flex;
+    justify-content: center;
     max-height: 528px;
-    height: 65vh;
-    width: 100%;
-    padding: 0 1.5em;
+    height: 450px;
+    width: 540px;
     background-color: var(--main-dark-grey);
 }
 
-.character-length-line{
+#main-container {
+    height: 100%;
+    width: 480px;
+}
+
+/* character length line */
+.character-length-line {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-#character-number{
-    color:var(--lime-green);
+#character-text {
+    font-size: 18px;
 }
 
-/* SLIDER */
+#character-number {
+    font-size: 32px;
+    color: var(--lime-green);
+}
+
+/* SLIDER*/
 .slidecontainer {
     min-width: 100%;
 }
@@ -108,7 +117,6 @@ h3 {
     -webkit-appearance: none;
     appearance: none;
     width: 100%;
-    margin-top: 2em;
     height: 9px;
     border: none;
     outline: none;
@@ -140,30 +148,74 @@ h3 {
     border-color: var(--lime-green);
 }
 
-/* media querries */
-@media(max-width:800px) {
-    body {
-        background-size: auto;
-    }
+/* CHECKBOX SECTION CUSTOMIZATION */
 
-    #mySlider {
-        height: 8px;
-    }
-
-    #mySlider::-webkit-slider-thumb {
-        width: 45px;
-    }
-
+#checkbox-section {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
 }
 
-@media(max-width:400px) {
-    #mySlider::-webkit-slider-thumb {
-        width: 40px;
-    }
+/* checkbox + description text */
+.checkbox-line {
+    height: 40px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 60%;
 }
 
-@media(max-width:300px) {
-    #mySlider::-webkit-slider-thumb {
-        width: 35px;
-    }
+/* margin text from checkboxes */
+.checkbox-line-text {
+    margin-left: 1.5em;
+}
+
+/* reseting default checkbox customization */
+.checkbox-line input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* not checked state */
+.checkmark {
+    cursor: pointer;
+    height: 16px;
+    width: 16px;
+    background-color: var(--background-color);
+    border: solid;
+    border-radius: 2px;
+    border-color: var(--lime-green);
+}
+
+/* checked state */
+.checkbox-line input:checked~.checkmark {
+    background-color: var(--lime-green);
+    background-image: url('../assets/images/icon-check.svg');
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+/* PASSWORD STRENGTH SECTION */
+
+#password-strenght-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 72px;
+    margin-top: 1.5em;
+    background-color: var(--background-color);
+}
+
+#strength-text {
+    margin-left: 1.5em;
+    color: var(--dark-text);
+    font-size: 18px;
+}
+
+#strength-indicator-box {
+    margin-right: 1.5em;
 }
