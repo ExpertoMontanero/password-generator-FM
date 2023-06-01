@@ -67,12 +67,18 @@ h3 {
     padding-left: 30px;
     font-size: 32px;
     line-height: 42px;
+    color: var(--dark-text);
 }
 
 #copy-icon {
     padding-right: 30px;
     width: 21px;
     height: 24px;
+    cursor: pointer;
+}
+
+#copy-icon:hover {
+    filter: brightness(0) invert(1);
 }
 
 /* MAIN CONTENT SECTION */
@@ -81,7 +87,7 @@ h3 {
     display: flex;
     justify-content: center;
     max-height: 528px;
-    height: 450px;
+    height: 525px;
     width: 540px;
     background-color: var(--main-dark-grey);
 }
@@ -143,7 +149,7 @@ h3 {
 #mySlider::-webkit-slider-thumb:hover {
     width: 27px;
     border-style: solid;
-    border-width: 2px;
+    border-width: 1px;
     background-color: var(--background-color);
     border-color: var(--lime-green);
 }
@@ -163,6 +169,7 @@ h3 {
     justify-content: start;
     align-items: center;
     width: 60%;
+    cursor: pointer;
 }
 
 /* margin text from checkboxes */
@@ -186,16 +193,22 @@ h3 {
     width: 16px;
     background-color: var(--background-color);
     border: solid;
-    border-radius: 2px;
-    border-color: var(--lime-green);
+    border-width: 2px;
+    border-radius: 1px;
+    border-color: var(--light-text);
 }
 
 /* checked state */
 .checkbox-line input:checked~.checkmark {
     background-color: var(--lime-green);
+    border-color: var(--lime-green);
     background-image: url('../assets/images/icon-check.svg');
     background-repeat: no-repeat;
     background-position: 50%;
+}
+
+.checkbox-line input:hover~.checkmark {
+    border-color: var(--lime-green);
 }
 
 /* PASSWORD STRENGTH SECTION */
@@ -210,12 +223,71 @@ h3 {
     background-color: var(--background-color);
 }
 
+/* just a text (STRENGTH) */
 #strength-text {
     margin-left: 1.5em;
     color: var(--dark-text);
     font-size: 18px;
 }
 
-#strength-indicator-box {
+/* Section of strength indicator bars and strength indicator text specifier */
+#strength-indicator-section {
     margin-right: 1.5em;
+    display: flex;
+    justify-content: end;
+    width: fit-content;
+}
+
+#strength-indicator-text {
+    margin-right: 0.3em;
+    letter-spacing: 1px;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+/* strength indicator bars container */
+#strength-indicator-bars {
+    display: flex;
+    align-items: center;
+}
+
+/* strength indicator bars */
+
+.strength-bar {
+    width: 8px;
+    height: 26px;
+    margin-left: 0.4em;
+    border: solid;
+    border-width: 2px;
+}
+
+/* GENERATE BUTTON SECTION */
+
+#generate-btn {
+    width: 100%;
+    height: 65px;
+    margin-top: 1.5em;
+    font-family: customFont;
+    font-size: 18px;
+    font-weight: 600;
+    border: solid;
+    border-width: 2px;
+    border-color: var(--lime-green);
+    background-color: var(--lime-green);
+}
+
+/* button hover */
+#generate-btn:hover {
+    background-color: var(--main-dark-grey);
+    color: var(--lime-green);
+}
+
+/* arrow icon padding */
+#arrow-icon {
+    padding-left: 1em;
+}
+
+/* turning arrow icon lime green on button hover */
+#generate-btn:hover #arrow-icon {
+    filter: invert(76%) sepia(10%) saturate(804%) hue-rotate(72deg) brightness(120%) contrast(101%);
 }

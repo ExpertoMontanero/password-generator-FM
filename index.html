@@ -19,8 +19,8 @@
       <h2 id="heading-text">Password Generator</h2>
     </div>
     <div id="password-container">
-      <div id="password-text">PTx1f5DaFX</div>
-      <img src="assets\images\icon-copy.svg" id="copy-icon" alt="copy icon">
+      <div id="password-text">PTx1f5D!FX</div>
+      <img src="../assets/images/icon-copy.svg" id="copy-icon" alt="copy icon">
     </div>
     <div id="padding-container">
       <div id="main-container">
@@ -34,34 +34,41 @@
         <section id="checkbox-section">
           <label class="checkbox-line">
             <input type="checkbox" class="checkbox" name="checkbox" id="uppercase-cb" checked="checked"
-              alt="uppercase letter checkbox">
+              alt="include uppercase letter checkbox">
             <span class="checkmark"></span>
             <p class="checkbox-line-text">Include Uppercase Letters</p>
           </label>
           <label class="checkbox-line">
             <input type="checkbox" class="checkbox" name="checkbox" id="lowercase-cb" checked="checked"
-              alt="uppercase letter checkbox">
+              alt="include lowercase letter checkbox">
             <span class="checkmark"></span>
             <p class="checkbox-line-text">Include Lowercase Letters</p>
           </label>
           <label class="checkbox-line">
             <input type="checkbox" class="checkbox" name="checkbox" id="numbers-cb" checked="checked"
-              alt="uppercase letter checkbox">
+              alt="include numbers checkbox">
             <span class="checkmark"></span>
             <p class="checkbox-line-text">Include Numbers</p>
           </label>
           <label class="checkbox-line">
-            <input type="checkbox" class="checkbox" name="checkbox" id="symbols-cb" alt="uppercase letter checkbox">
+            <input type="checkbox" class="checkbox" name="checkbox" id="symbols-cb" alt="include symbols checkbox">
             <span class="checkmark"></span>
             <p class="checkbox-line-text">Include Symbols</p>
           </label>
         </section>
         <section id="password-strenght-section">
           <p id="strength-text">STRENGTH</p>
-          <div id="strength-indicator-box">
-           example
+          <div id="strength-indicator-section">
+            <h3 id="strength-indicator-text">MEDIUM</h3>
+            <div id="strength-indicator-bars">
+              <div class="strength-bar"></div>
+              <div class="strength-bar"></div>
+              <div class="strength-bar"></div>
+              <div class="strength-bar"></div>
+            </div>
           </div>
         </section>
+        <button id="generate-btn">GENERATE<img src="../assets/images/icon-arrow-right.svg" id="arrow-icon" alt="arrow-icon"> </button>
       </div>
     </div>
   </div>
