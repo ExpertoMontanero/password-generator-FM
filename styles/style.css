@@ -329,6 +329,9 @@ h3 {
     #strength-text {
         font-size: 16px;
     }
+    #password-text{
+        font-size: 24px;
+    }
 }
 
 @media(max-width:500px) {
@@ -378,6 +381,10 @@ h3 {
     /* slider on hover customization */
     #mySlider::-webkit-slider-thumb:hover {
         width: 27px; 
+    }
+
+    #password-text{
+        font-size: 20px;
     }
 }
 
@@ -464,6 +471,10 @@ h3 {
     #generate-btn{
         height: 55px;
         margin-top: 1em;
+    }
+
+    #password-text{
+        font-size: 18px;
     }
 
 }
