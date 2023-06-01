@@ -18,7 +18,7 @@
 
 
 body {
-    height: 97vh;
+    height: 100vh;
     width: 100vw;
     margin: 0;
     padding: 0;
@@ -190,7 +190,7 @@ h3 {
 .checkmark {
     cursor: pointer;
     height: 16px;
-    width: 16px;
+    aspect-ratio: 1/1;
     background-color: var(--background-color);
     border: solid;
     border-width: 2px;
@@ -290,4 +290,180 @@ h3 {
 /* turning arrow icon lime green on button hover */
 #generate-btn:hover #arrow-icon {
     filter: invert(76%) sepia(10%) saturate(804%) hue-rotate(72deg) brightness(120%) contrast(101%);
+}
+
+
+
+@media(max-width:700px) {
+    #password-container {
+        width: 400px;
+    }
+
+    #heading-container {
+        width: 400px;
+    }
+
+    #padding-container {
+        width: 400px;
+    }
+
+    #main-container {
+        width: 340px;
+    }
+
+    .checkbox-line {
+        width: 100%;
+    }
+
+    .strength-bar {
+        height: 24px;
+        width: 7px;
+    }
+
+    /* fonts sizes corection */
+
+    #strength-indicator-text {
+        font-size: 20px;
+    }
+
+    #strength-text {
+        font-size: 16px;
+    }
+}
+
+@media(max-width:500px) {
+
+    #password-container {
+        width: 350px;
+    }
+
+    #heading-container {
+        width: 350px;
+    }
+
+    #padding-container {
+        width: 350px;
+    }
+
+    #main-container {
+        width: 300px;
+    }
+
+    .checkbox-line {
+        width: 100%;
+    }
+
+    /* fonts sizes corection */
+    #strength-indicator-text {
+        font-size: 18px;
+    }
+
+    #strength-text {
+        font-size: 14px;
+    }
+
+    #generate-btn {
+        font-size: 16px;
+    }
+
+    #mySlider {
+        height: 8px;
+    }
+    
+    /* slider thumb customization */
+    #mySlider::-webkit-slider-thumb { 
+        width: 26px; 
+    }
+    
+    /* slider on hover customization */
+    #mySlider::-webkit-slider-thumb:hover {
+        width: 27px; 
+    }
+}
+
+
+@media(max-width:360px) {
+
+    #password-container {
+        width: 310px;
+    }
+
+    #heading-container {
+        width: 310px;
+    }
+
+    #padding-container {
+        width: 310px;
+        height: 460px;
+    }
+
+    #main-container {
+        width: 275px;
+        height: 300px;
+    }
+
+    .checkbox-line {
+        width: 100%;
+    }
+
+    #copy-icon {
+        padding-right: 20px;
+        width: 20px;
+        aspect-ratio: 1/1;
+    }
+
+    #password-text {
+        padding-left: 20px;
+        font-size: 23px;
+    }
+
+    #character-number {
+        font-size: 25px;
+    }
+
+    #character-text {
+        font-size: 16px;
+    }
+
+    /* fonts sizes corection */
+    #strength-indicator-text {
+        font-size: 18px;
+    }
+
+    #strength-text {
+        font-size: 14px;
+    }
+
+    #generate-btn {
+        font-size: 16px;
+    }
+
+    #mySlider {
+        height: 7px;
+    }
+    
+    /* slider thumb customization */
+    #mySlider::-webkit-slider-thumb { 
+        width: 24px; 
+    }
+    
+    /* slider on hover customization */
+    #mySlider::-webkit-slider-thumb:hover {
+        width: 23px; 
+    }
+
+    .checkbox-line-text{
+        font-size: 14px;
+    }
+
+    #password-strenght-section{
+        margin-top: 0.8em;
+        height: 55px;
+    }
+
+    #generate-btn{
+        height: 55px;
+        margin-top: 1em;
+    }
+
 }
