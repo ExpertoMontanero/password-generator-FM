@@ -13,6 +13,7 @@ $("#mySlider").on('input', function () {
 
 // generate password main function on button click
 $('#generate-btn').on('click', function () {
+    $('#copied-text').hide();
     $('#password-text').css('color', 'white').text('');
     var number = generatorIngredientsPicker();
     var passwordLength = $('#character-number').text();
@@ -20,7 +21,6 @@ $('#generate-btn').on('click', function () {
     for (let i = 0; i < passwordLength; i++) {
         if (number != 0) {
             let expr = Math.floor(Math.random() * number + 1);
-            console.log(expr);
             switch (expr) {
                 case 1:
                     codingSwitchingFunction(1);
@@ -110,3 +110,72 @@ function RandomSymbol() {
 function RandomNumber() {
     return Math.floor(Math.random() * 10);
 }
+
+// STRENGHT INDICATOR SCRIPT
+
+$('#generate-btn').on('click', function () {
+    var strength = strengthIndicatorValue();
+    if (strength <= 15) {
+        $('#first-bar').css('background-color', 'var(--pale-red)');
+        $('#first-bar').css('border-color', 'var(--pale-red)');
+        $('#second-bar').css('background-color', 'transparent');
+        $('#second-bar').css('border-color', 'var(--light-text)');
+        $('#third-bar').css('background-color', 'transparent');
+        $('#third-bar').css('border-color', 'var(--light-text)');
+        $('#fourth-bar').css('background-color', 'transparent');
+        $('#fourth-bar').css('border-color', 'var(--light-text)');
+        $('#strength-indicator-text').text('TOO WEAK!');
+    }
+    if (strength > 15 && strength <= 32) {
+        $('#first-bar').css('background-color', 'var(--pale-orange)');
+        $('#first-bar').css('border-color', 'var(--pale-orange)');
+        $('#second-bar').css('background-color', 'var(--pale-orange)');
+        $('#second-bar').css('border-color', 'var(--pale-orange)');
+        $('#third-bar').css('background-color', 'transparent');
+        $('#third-bar').css('border-color', 'var(--light-text)');
+        $('#fourth-bar').css('background-color', 'transparent');
+        $('#fourth-bar').css('border-color', 'var(--light-text)');
+        $('#strength-indicator-text').text('WEAK');
+    }
+    if (strength > 32 && strength <= 46) {
+        $('#first-bar').css('background-color', 'var(--pale-yellow)');
+        $('#first-bar').css('border-color', 'var(--pale-yellow)');
+        $('#second-bar').css('background-color', 'var(--pale-yellow)');
+        $('#second-bar').css('border-color', 'var(--pale-yellow)');
+        $('#third-bar').css('background-color', 'var(--pale-yellow)');
+        $('#third-bar').css('border-color', 'var(--pale-yellow)');
+        $('#fourth-bar').css('background-color', 'transparent');
+        $('#fourth-bar').css('border-color', 'var(--light-text)');
+        $('#strength-indicator-text').text('MEDIUM');
+    }
+    if (strength > 46) {
+        $('.strength-bar').css('background-color', 'var(--lime-green)');
+        $('.strength-bar').css('border-color', 'var(--lime-green)');
+        $('#strength-indicator-text').text('STRONG');
+    }
+})
+
+//calculating strength of a password 
+function strengthIndicatorValue() {
+    var strengthMultipier = 0;
+    if ($('#uppercase-cb').prop('checked')) {
+        strengthMultipier++;
+    }
+    if ($('#lowercase-cb').prop('checked')) {
+        strengthMultipier++;
+    }
+    if ($('#numbers-cb').prop('checked')) {
+        strengthMultipier++;
+    }
+    if ($('#symbols-cb').prop('checked')) {
+        strengthMultipier++;
+    }
+    return strength = Number($('#character-number').text()) * strengthMultipier;
+}
+
+// COPY TO CLIPPBORD
+$('#copied-text').hide();
+$('#copy-icon').on('click', function () {
+    navigator.clipboard.writeText($('#password-text').text());
+    $('#copied-text').show();
+});

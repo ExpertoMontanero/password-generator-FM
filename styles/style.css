@@ -70,6 +70,16 @@ h3 {
     color: var(--dark-text);
 }
 
+#copy-section {
+    display: flex;
+    align-items: center;
+}
+
+#copied-text {
+    margin-right: 1em;
+    color: var(--lime-green);
+}
+
 #copy-icon {
     padding-right: 30px;
     width: 21px;
@@ -293,7 +303,6 @@ h3 {
 }
 
 
-
 @media(max-width:700px) {
     #password-container {
         width: 400px;
@@ -329,8 +338,14 @@ h3 {
     #strength-text {
         font-size: 16px;
     }
-    #password-text{
-        font-size: 24px;
+
+    #password-text {
+        font-size: 22px;
+    }
+
+    #copied-text{
+        margin-right: 0.5em;
+        font-size: 12px;
     }
 }
 
@@ -372,19 +387,23 @@ h3 {
     #mySlider {
         height: 8px;
     }
-    
+
     /* slider thumb customization */
-    #mySlider::-webkit-slider-thumb { 
-        width: 26px; 
-    }
-    
-    /* slider on hover customization */
-    #mySlider::-webkit-slider-thumb:hover {
-        width: 27px; 
+    #mySlider::-webkit-slider-thumb {
+        width: 26px;
     }
 
-    #password-text{
-        font-size: 20px;
+    /* slider on hover customization */
+    #mySlider::-webkit-slider-thumb:hover {
+        width: 27px;
+    }
+
+    #password-text {
+        font-size: 19px;
+    }
+    #copied-text{
+        margin-right: 0.5em;
+        font-size: 10px;
     }
 }
 
@@ -448,33 +467,33 @@ h3 {
     #mySlider {
         height: 7px;
     }
-    
+
     /* slider thumb customization */
-    #mySlider::-webkit-slider-thumb { 
-        width: 24px; 
-    }
-    
-    /* slider on hover customization */
-    #mySlider::-webkit-slider-thumb:hover {
-        width: 23px; 
+    #mySlider::-webkit-slider-thumb {
+        width: 24px;
     }
 
-    .checkbox-line-text{
+    /* slider on hover customization */
+    #mySlider::-webkit-slider-thumb:hover {
+        width: 23px;
+    }
+
+    .checkbox-line-text {
         font-size: 14px;
     }
 
-    #password-strenght-section{
+    #password-strenght-section {
         margin-top: 0.8em;
         height: 55px;
     }
 
-    #generate-btn{
+    #generate-btn {
         height: 55px;
         margin-top: 1em;
     }
 
-    #password-text{
-        font-size: 18px;
+    #password-text {
+        font-size: 16px;
     }
 
 }
